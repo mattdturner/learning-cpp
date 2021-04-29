@@ -19,8 +19,12 @@ int main () {
 }
 
 int factorial(int input){
-  if ( input == 1 ) {
-    return input;
+  if ( input < 0 ) {
+    cout << "Input number (" << input << ") cannot be negative\n";
+    return -1;
+  }
+  if ( input == 1 || input == 0 ) {
+    return 1;
   } else {
     return input*factorial(input-1);
   }
